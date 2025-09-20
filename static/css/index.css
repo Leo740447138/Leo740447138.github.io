@@ -155,3 +155,27 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+.carousel-title-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  text-align: center;
+  z-index: 10;
+}
+
+
+.carousel-title-container .publication-title {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  background-color: rgba(70, 67, 67, 0.5);
+  padding: 50px;
+  border-radius: 20px;
+}
+
+
+.top-background-carousel {
+  position: relative;
+}

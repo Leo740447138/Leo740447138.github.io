@@ -76,3 +76,13 @@ $(document).ready(function() {
     bulmaSlider.attach();
 
 })
+
+document.addEventListener('DOMContentLoaded', function() {
+  var backgroundCarousel = bulmaCarousel.attach('#background-carousel', {
+    slidesToScroll: 1,
+    slidesToShow: 1,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+  });
+});
