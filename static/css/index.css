@@ -153,15 +153,52 @@ body {
 
 top-background-carousel{
   position: relative;
-  height: clamp(420px, 56.25vw, 120svh); /* 16:9，稳定 */
+  height: clamp(420px, 56.25vw, 120svh); 
   overflow: hidden;
 
-  /* 关键：计算一个与 hero 同步的缩放系数（以 1280×720 为设计稿基准） */
+
   --hero-scale: min(calc(100vw / 1280), calc(100svh / 720));
 }
 
-/* 轮播图片依旧铺满容器 */
+
 #background-carousel, #background-carousel .item, #background-carousel .item img{
   width:100%; height:100%;
 }
 #background-carousel .item img{ object-fit: cover; object-position: center; }
+
+
+.carousel-title-container{
+  position: absolute; top:50%; left:50%;
+  transform: translate(-50%, -50%) scale(var(--hero-scale)); 
+  transform-origin: center;
+  width: 1000px;                   
+  z-index: 3; text-align: center; pointer-events: none;
+}
+
+
+.carousel-title-container .publication-title{
+  display: inline-block;
+  margin: 0;
+  color: #fff;
+  line-height: 1.15;
+  letter-spacing: .02em;
+  background: rgba(0,0,0,.45);
+  padding: 24px 32px;             
+  border-radius: 24px;
+  backdrop-filter: blur(4px);
+  font-weight: 700;
+  font-size: 56px !important;      
+  white-space: pre-line;            
+}
+
+
+@media (max-width: 768px) {
+  .carousel-title-container {
+    width: min(1000px, 94vw);
+  }
+
+  .carousel-title-container .publication-title.title.is-1 {
+    font-size: clamp(20px, 7vw, 40px) !important;
+  }
+}
+
