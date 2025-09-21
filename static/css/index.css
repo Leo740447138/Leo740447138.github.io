@@ -151,54 +151,53 @@ body {
   border-radius: 5px;
 }
 
-top-background-carousel{
+.top-background-carousel{
   position: relative;
-  height: clamp(420px, 56.25vw, 120svh); 
+  
+  height: clamp(420px, 56.25vw, 120dvh); 
   overflow: hidden;
-
-
-  --hero-scale: min(calc(100vw / 1280), calc(100svh / 720));
 }
 
 
-#background-carousel, #background-carousel .item, #background-carousel .item img{
-  width:100%; height:100%;
+#background-carousel,
+#background-carousel .item,
+#background-carousel .item img{
+  width: 100%;
+  height: 100%;
 }
-#background-carousel .item img{ object-fit: cover; object-position: center; }
+#background-carousel{ position: relative; }
+#background-carousel .item{
+  position: absolute; inset: 0;
+  opacity: 0; transition: opacity .8s ease;
+}
+#background-carousel .item.is-active{ opacity: 1; }
+#background-carousel .item img{
+  object-fit: cover;         
+  object-position: center;    
+}
 
 
 .carousel-title-container{
   position: absolute; top:50%; left:50%;
-  transform: translate(-50%, -50%) scale(var(--hero-scale)); 
-  transform-origin: center;
-  width: 1000px;                   
-  z-index: 3; text-align: center; pointer-events: none;
+  transform: translate(-50%, -50%);
+  width: min(1100px, 92vw);
+  text-align: center; z-index: 3; pointer-events: none;
 }
-
-
-.carousel-title-container .publication-title{
-  display: inline-block;
-  margin: 0;
-  color: #fff;
-  line-height: 1.15;
-  letter-spacing: .02em;
+.carousel-title-container .publication-title.title.is-1{
+  margin: 0; display: inline-block;
+  color: #fff; line-height: 1.15; letter-spacing: .02em;
   background: rgba(0,0,0,.45);
-  padding: 24px 32px;             
-  border-radius: 24px;
-  backdrop-filter: blur(4px);
+  padding: clamp(12px, 3vw, 28px);
+  border-radius: 20px; backdrop-filter: blur(4px);
   font-weight: 700;
-  font-size: 56px !important;      
-  white-space: pre-line;            
+  font-size: clamp(22px, 5.6vw, 56px) !important;
+  text-wrap: balance; overflow-wrap: break-word; hyphens: auto;
 }
 
 
-@media (max-width: 768px) {
-  .carousel-title-container {
-    width: min(1000px, 94vw);
-  }
-
-  .carousel-title-container .publication-title.title.is-1 {
+@media (max-width: 768px){
+  .carousel-title-container{ width: min(1000px, 94vw); }
+  .carousel-title-container .publication-title.title.is-1{
     font-size: clamp(20px, 7vw, 40px) !important;
   }
 }
-
