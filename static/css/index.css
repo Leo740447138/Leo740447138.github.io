@@ -4,13 +4,13 @@ body {
 
 
 .footer .icon-link {
-    font-size: 25px;
-    color: #000;
+  font-size: 25px;
+  color: #000;
 }
 
 .link-block a {
-    margin-top: 5px;
-    margin-bottom: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .dnerf {
@@ -28,8 +28,7 @@ body {
 }
 
 
-.publication-title {
-}
+.publication-title {}
 
 .publication-banner {
   max-height: parent;
@@ -44,71 +43,67 @@ body {
   object-fit: fit;
 }
 
-.publication-header .hero-body {
-}
+.publication-header .hero-body {}
 
 .publication-title {
-    font-family: 'Google Sans', sans-serif;
+  font-family: 'Google Sans', sans-serif;
 }
 
 .publication-authors {
-    font-family: 'Google Sans', sans-serif;
+  font-family: 'Google Sans', sans-serif;
 }
 
 .publication-venue {
-    color: #555;
-    width: fit-content;
-    font-weight: bold;
+  color: #555;
+  width: fit-content;
+  font-weight: bold;
 }
 
 .publication-awards {
-    color: #ff3860;
-    width: fit-content;
-    font-weight: bolder;
+  color: #ff3860;
+  width: fit-content;
+  font-weight: bolder;
 }
 
-.publication-authors {
-}
+.publication-authors {}
 
 .publication-authors a {
-   color: hsl(204, 86%, 53%) !important;
+  color: hsl(204, 86%, 53%) !important;
 }
 
 .publication-authors a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .author-block {
   display: inline-block;
 }
 
-.publication-banner img {
-}
+.publication-banner img {}
 
 .publication-authors {
   /*color: #4286f4;*/
 }
 
 .publication-video {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
 
-    overflow: hidden;
-    border-radius: 10px !important;
+  overflow: hidden;
+  border-radius: 10px !important;
 }
 
 .publication-video iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.publication-body img {
-}
+.publication-body img {}
 
 .results-carousel {
   overflow: hidden;
@@ -138,8 +133,7 @@ body {
   border-radius: 5px;
 }
 
-.interpolation-video-column {
-}
+.interpolation-video-column {}
 
 .interpolation-panel .slider {
   margin: 0 !important;
@@ -152,83 +146,22 @@ body {
 #interpolation-image-wrapper {
   width: 100%;
 }
+
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
 
-.top-background-carousel {
+top-background-carousel{
   position: relative;
-  height: 120vh;
+  height: clamp(420px, 56.25vw, 120svh); /* 16:9，稳定 */
   overflow: hidden;
+
+  /* 关键：计算一个与 hero 同步的缩放系数（以 1280×720 为设计稿基准） */
+  --hero-scale: min(calc(100vw / 1280), calc(100svh / 720));
 }
 
-.top-background-carousel #background-carousel {
-  height: 100%;
-  width: 100%;
-  position: relative;
+/* 轮播图片依旧铺满容器 */
+#background-carousel, #background-carousel .item, #background-carousel .item img{
+  width:100%; height:100%;
 }
-
-.top-background-carousel #background-carousel .item {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: none;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-/* .top-background-carousel #background-carousel .item:first-child {
-  display: block;
-  opacity: 1;
-} */
-
-.top-background-carousel #background-carousel .item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.carousel-title-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
-  text-align: center;
-  z-index: 10;
-  pointer-events: none;
-}
-
-.carousel-title-container .publication-title {
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-  background-color: rgba(70, 67, 67, 0.7);
-  padding: 40px;
-  border-radius: 20px;
-  backdrop-filter: blur(5px);
-}
-
-
-.top-background-carousel::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
-  z-index: 5;
-  pointer-events: none;
-}
-
-
-.top-background-carousel #background-carousel {
-  z-index: 1;
-}
-
-
-.carousel-title-container {
-  z-index: 15;
-}
+#background-carousel .item img{ object-fit: cover; object-position: center; }
