@@ -127,31 +127,30 @@
             style="background-color: #f8f9fa; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
             <p style="margin-bottom: 1.5rem; font-size: 1.2rem; line-height: 1.7;">
               In this paper, we present a mobile manipulation
-              system for humanoid robots to solve practical industrial part-
-              sorting tasks, in which the robot needs to pick up an industrial
+              system for humanoid robots to solve practical industrial part-sorting tasks, in which the robot needs to
+              pick up an industrial
               part from one workstation and transport it to another. Several
               functional modules are included in the system.
             </p>
-            <p style="margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.7;">
-              The <strong>lower-body control module</strong> comprises locomotion and navigation, where the
+            <p style="margin-bottom: 1.5rem; font-size: 1.2rem; line-height: 1.7;">
+              The lower-body control module comprises locomotion and navigation, where the
               Model Predictive Control (MPC) is used together
               with the Whole-Body Controller (WBC) to maintain dynamic balance during walk-
               ing, while a navigation model simultaneously localizes the real-
               time pose of the robot and outputs the desired walking control
               signals to ensure that the humanoid robot moves accurately be-
-              tween different workstations. In terms of
-              <strong>humanoid upper-body manipulation</strong>,
+              tween different workstations. In terms of humanoid upper-body manipulation
               we first propose a visual perception model capable of segmenting, selecting, and localizing the target
               part from a set of candidates in the environment; an arm trajectory planning model is then employed to
-              execute the manipulation. Our system incorporates different types of <strong><em>visual perception
-                  (learning-based and Augmented Reality (AR)-tag-based)</em></strong> and <strong><em>arm trajectory
-                  planning (closed-loop learning-based and open-loop MPC-based) methods</em></strong> to enable our
+              execute the manipulation. Our system incorporates different types of visual perception
+              (learning-based and Augmented Reality (AR)-tag-based) and arm trajectory
+              planning (closed-loop learning-based and open-loop MPC-based) methods to enable our
               system to work in a wider range of industrial part-sorting settings.
             </p>
-            <p style="font-size: 1.1rem; line-height: 1.7;">
+            <p style="font-size: 1.2rem; line-height: 1.7;">
               Our system is evaluated on two
-              practical industrial part-sorting tasks, e.g. <strong>Set Parts Supply (SPS)</strong>
-              and <strong>Surface Mount Technology (SMT)</strong>, demonstrating satisfac-
+              practical industrial part-sorting tasks, e.g. Set Parts Supply (SPS)
+              and Surface Mount Technology (SMT), demonstrating satisfac-
               tory performance, flexibility, and generalizability, with strong
               potential for deployment in real industrial settings
             </p>
@@ -167,16 +166,16 @@
         <div class="column is-10">
           <h2 class="title is-3" style="margin-bottom: 2rem;">Overall Architecture</h2>
           <div class="has-text-justified" style="margin-bottom: 2rem;">
-            <p style="font-size: 1.5rem; color: #666; line-height: 2;">
+            <p style="font-size: 1.2rem; color: #666; line-height: 2;">
               Detailed architecture of our humanoid mobile manipulation system. The purple area illustrates the
-              <strong>hardware configuration</strong>, including
+              hardware configuration, including
               the on-board and external hardware, as well as the parts used in our experiments. The light blue area
-              illustrates our <strong>functional modules</strong>: <strong><em>the
-                  locomotion and navigation modules </em></strong> jointly enable the robot to reach the desired work
-              pose while maintaining balance; <strong><em>the visual perception
-                  module </em></strong>selects the optimal grasp target and provides its information; and
-              <strong><em>the manipulation module </em></strong> executes the grasping action. The red
-              area illustrates an overview of the <strong>execution process</strong> for our two tasks.
+              illustrates our functional modules: the
+              locomotion and navigation modules jointly enable the robot to reach the desired work pose while
+              maintaining balance; the visual perception
+              module selects the optimal grasp target and provides its information; and
+              the manipulation module executes the grasping action. The red area illustrates an overview of the
+              execution process for our two tasks.
             </p>
           </div>
           <div class="architecture-image-container"
@@ -252,10 +251,10 @@
         <div class="column is-half">
           <div class="has-text-justified" style="margin-bottom: 1.5rem;">
             <p style="font-size: 1.2rem; color: #666; line-height: 1.6;">
-              This video demonstrates our humanoid robots operating in a <strong>real industrial factory
-                environment</strong>.
-              The footage shows <strong>three robots working simultaneously</strong> in the same workspace, performing
-              SMT part-sorting tasks. This <strong>long-take video</strong> showcases the system's
+              This video demonstrates our humanoid robots operating in a real industrial factory
+              environment.
+              The footage shows three robots working simultaneously in the same workspace, performing
+              SMT part-sorting tasks. This long-take video showcases the system's
               reliability and scalability in practical manufacturing scenarios, highlighting the potential for
               multi-humanoid robots deployment in industrial settings.
             </p>
@@ -273,9 +272,9 @@
       <h2 class="title is-3 has-text-centered">Navigation</h2>
       <div class="has-text-justified" style="margin-bottom: 2rem;">
         <p style="font-size: 1.2rem; color: #666; line-height: 1.6;">
-          These videos demonstrate the <strong>navigation precision</strong> of our humanoid robot system.
-          The footage showcases the robot's ability to accurately reach both <strong>pick workstations</strong>
-          and <strong>place workstations</strong> with high positioning accuracy, which is crucial for successful
+          These videos demonstrate the navigation precision of our humanoid robot system.
+          The footage showcases the robot's ability to accurately reach both pick workstations
+          and place workstations with high positioning accuracy, which is crucial for successful
           manipulation tasks in industrial environments.
         </p>
       </div>
@@ -304,7 +303,7 @@
       <h2 class="title is-3 has-text-centered">Dynamic Obstacle Halt</h2>
       <div class="has-text-justified" style="margin-bottom: 1.5rem;">
         <p style="font-size: 1.2rem; color: #666; line-height: 1.6;">
-          These videos demonstrate the <strong>obstacle halt functionality</strong> of our proposed navigation module.
+          These videos demonstrate the obstacle halt functionality of our proposed navigation module.
           The
           results show that the robot can accurately stop before contacting an obstacle, whether moving forward or
           backward, and resume motion once the obstacle is removed.
@@ -358,10 +357,10 @@
       <div class="has-text-justified" style="margin-bottom: 1.5rem;">
         <p style="font-size: 1.2rem; color: #666; line-height: 1.6;">
           These two videos show two tasks designed in the Mujoco simulator to replicate the pick and place dynamics of a
-          real-world part sorting operations. <strong>Task 1:</strong> The robot first uses its left arm to grasp a part
+          real-world part sorting operations. Task 1: The robot first uses its left arm to grasp a part
           from the left-side moving conveyor and places it at a position on the tabletop. Then, it switches to the right
           hand to
-          re-grasp the part and place it at another target position on the right. <strong>Task 2:</strong> The robot
+          re-grasp the part and place it at another target position on the right. Task 2:The robot
           first uses its right arm to grasp a part from the front-facing conveyor and place it onto a raised block on
           the tabletop. It
           then switches to the left arm to transfer the part from the block to the final target position. Among them,
